@@ -1,0 +1,36 @@
+.ul-todo-sidebar{
+    float: left;
+    min-width: 240px;
+    width: 240px;
+}
+.ul-todo-mobile-menu{
+    display: none;
+}
+.ul-todo-list-content {
+    height: 100vh;
+    
+    position: relative;
+}
+.ul-todo-sidebar.open {
+    left: 1px;
+}
+i.todo-sidebar-close {
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .ul-todo-list-content {
+        overflow-x: hidden;
+    }
+    i.todo-sidebar-close {
+        display: block;
+    }
+    .ul-todo-sidebar {
+        position: absolute;
+        z-index: 50;
+        left: -260px;
+        transition: all 0.2s ease;
+    }
+    .ul-todo-mobile-menu{
+        display: block;
+    }
+}
